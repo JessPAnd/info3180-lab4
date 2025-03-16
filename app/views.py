@@ -8,7 +8,6 @@ from app.models import UserProfile
 from app.forms import LoginForm
 from app.forms import UploadForm
 from flask import send_from_directory
-from app.helpers import get_uploaded_images
 from flask import current_app
 
 def get_uploaded_images():
