@@ -91,9 +91,11 @@ def files():
 
 
 @app.route('/logout')
-
-
-
+@login_required
+def logout():
+    logout_user()
+    flash('You have logged out.', 'success')
+    return redirect(url_for('home'))
 
 
 # user_loader callback. This callback is used to reload the user object from
